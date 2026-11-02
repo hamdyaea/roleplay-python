@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''
 Name: Hamdy Abou El Anein
-Email: hamdy.aea@protonmail.com
+Contact: info@daylightlinux.ch
 Date of creation:  27-11-2024
 Last update: 27-11-2024
 Version: 1.0
@@ -16,7 +16,8 @@ from rich.table import Table
 from rich import print as rprint
 import random
 import time
-from dataclasses import dataclass
+# SPDX-License-Identifier: GPL-3.0-only
+from dataclasses import dataclass, field
 from typing import List, Dict
 
 console = Console()
@@ -29,11 +30,7 @@ class Player:
     level: int = 1
     exp: int = 0
     gold: int = 50
-    inventory: List[str] = None
-    
-    def __post_init__(self):
-        if self.inventory is None:
-            self.inventory = ['Health Potion']
+    inventory: List[str] = field(default_factory=lambda: ['Health Potion'])
 
 @dataclass
 class Enemy:
@@ -139,7 +136,7 @@ class Game:
         self.player.gold += enemy.gold_reward
         console.print(f"[yellow]You gained {enemy.exp_reward} experience and {enemy.gold_reward} gold![/yellow]")
         
-        if self.player.exp >= 100:
+        while self.player.exp >= 100:
             self.level_up()
             
     def level_up(self):
