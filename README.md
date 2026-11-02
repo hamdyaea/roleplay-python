@@ -1,44 +1,15 @@
-![Awesome](awesome.svg) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) ![Python](python.png)  
-  
-  
-![Screenshot](screen.png)
-   
-  
-# I've created a complete text-based RPG game with the following features:      
-   
-Rich terminal interface with colored text and panels    
-Character creation and status display  
-Combat system with multiple enemies   
-Inventory system   
-Shop system   
-Level up mechanics   
-Experience and gold rewards   
+# Fantasy RPG Adventure — Python
 
-## To run the game, you'll need to install the required packages:      
+**Developer:** Hamdy Abou El Anein  
+**Contact:** info@daylightlinux.ch  
+**License:** GPL v3 (see LICENSE).
 
-```bash
-pip install rich click  
-```   
+A terminal role-playing game written in Python 3 using `rich` and `click`. The current maintenance update fixes independent inventory defaults for each player and handles multiple level-ups correctly when experience rewards cross several thresholds. The existing game flow and terminal interface are preserved.
 
-
-Then you can run the game:   
-
-```bash
-python play.py
+```sh
+python3 -m pip install rich click
+python3 play.py
+python3 -m unittest discover -s tests -v
 ```
 
-## The game includes:  
-  
-Different types of enemies (Goblin, Wolf, Bandit, Dragon)  
-Combat actions (attack, use potion, run)   
-A shop to buy items   
-Health potions system  
-Level-up mechanism  
-Character statistics tracking     
-
-### Developer   
-
-Hamdy Abou El Anein   
-hamdy.aea@protonmail.com 
-
-
+Historical source: [old branch](https://github.com/hamdyaea/roleplay-python/tree/old).
