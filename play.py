@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Developer: Hamdy Abou El Anein
+# Contact: info@daylightlinux.ch
 '''
 Name: Hamdy Abou El Anein
 Contact: info@daylightlinux.ch
